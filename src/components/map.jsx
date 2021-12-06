@@ -2,8 +2,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import "react-map-gl-geocoder/dist/mapbox-gl-geocoder.css";
 import React, { useState, useRef, useCallback, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { render } from "react-dom";
-import MapGL, { GeolocateControl } from "react-map-gl";
+import MapGL from "react-map-gl";
 import { Marker } from "react-map-gl";
 import Geocoder from "react-map-gl-geocoder";
 import axios from "axios";
@@ -13,12 +12,6 @@ import axios from "axios";
 // Ways to set Mapbox token: https://uber.github.io/react-map-gl/#/Documentation/getting-started/about-mapbox-tokens
 const MAPBOX_TOKEN =
     "pk.eyJ1IjoiYWRpdHlhdGhha2FyIiwiYSI6ImNrd2tob2F3azFxYncyb252cTZlMjI5bnEifQ.ATVrm9P45vun6A9l5qt_cQ";
-
-const geolocateStyle = {
-    float: "left",
-    margin: "50px",
-    padding: "10px",
-};
 
 const MapUniversity = () => {
     // const [coordinates, setCoordinates]= useState([])
@@ -45,7 +38,7 @@ const MapUniversity = () => {
                 setLat(res.data.features[0].geometry.coordinates[1]);
                 setLong(res.data.features[0].geometry.coordinates[0]);
             });
-    }, []);
+    });
 
     const [viewport, setViewport] = useState({
         latitude: lat,
@@ -102,7 +95,10 @@ const MapUniversity = () => {
                     offsetTop={-48}
                     offsetLeft={-24}
                 >
-                    <img src="https://img.icons8.com/color/48/000000/marker.png"></img>
+                    <img
+                        src="https://img.icons8.com/color/48/000000/marker.png"
+                        alt=""
+                    />
                 </Marker>
             </MapGL>
         </div>

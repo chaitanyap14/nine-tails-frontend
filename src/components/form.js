@@ -49,9 +49,9 @@ function Form() {
     const [unis, setUnis] = useState([]);
     const [query, setQuery] = useState("");
     const [state, setState] = useState(false);
-    const [undefine, setUndefine]= useState(false)
-    const len= unis.length;
-    const msg1= "Displaying "+ len +" Results.";
+    const [undefine, setUndefine] = useState(false);
+    const len = unis.length;
+    const msg1 = "Displaying " + len + " Results.";
     const undefinedMSg = "Enter valid Country Name.";
 
     const handleChange = (e) => {
@@ -60,41 +60,41 @@ function Form() {
     };
 
     const handleSubmit = () => {
+        //        if (query.name === "country") {
+        //            var tempCodes = codes.filter((code) => {
+        //                return query.value
+        //                    .toLowerCase()
+        //                    .includes(code.Name.toLowerCase());
+        //            });
+        //            console.log(tempCodes);
+        //        }
 
-          //        if (query.name === "country") {
-          //            var tempCodes = codes.filter((code) => {
-          //                return query.value
-          //                    .toLowerCase()
-          //                    .includes(code.Name.toLowerCase());
-          //            });
-          //            console.log(tempCodes);
-          //        }
+        const filteredUnis = data.filter((uni) => {
+            if (query.name === "college") {
+                return uni.name
+                    .toLowerCase()
+                    .includes(query.value.toLowerCase());
+            } else if (query.name === "country") {
+                const tempCodes = codes.filter((code) => {
+                    return query.value
+                        .toLowerCase()
+                        .includes(code.Name.toLowerCase());
+                });
+                //                return uni.country === tempCodes[0].Code;
+                if (tempCodes[0] === undefined) {
+                    setUndefine(true);
+                    return null;
+                } else if (uni.country === tempCodes[0].Code) {
+                    return uni;
+                }
+            }
+            return null;
+        });
+        setUnis(filteredUnis);
+        setState(true);
+    };
 
-          const filteredUnis = data.filter((uni) => {
-              if (query.name === "college") {
-                  return uni.name
-                      .toLowerCase()
-                      .includes(query.value.toLowerCase());
-              } else if (query.name === "country") {
-                  const tempCodes = codes.filter((code) => {
-                      return query.value
-                          .toLowerCase()
-                          .includes(code.Name.toLowerCase());
-                  });
-                  //                return uni.country === tempCodes[0].Code;
-                  if (tempCodes[0] === undefined) {
-                      setUndefine(true)
-                      return null;
-                  } else if (uni.country === tempCodes[0].Code) {
-                      return uni;
-                  }
-              }
-          });
-          setUnis(filteredUnis);
-          setState(true);
-      };
-
-    const showUnis = unis.map((uni,index) => {
+    const showUnis = unis.map((uni, index) => {
         return (
             <Card
                 key={index}
@@ -154,7 +154,7 @@ function Form() {
 
             {state && (
                 <div className="no-display">
-                    <h3>{undefine?undefinedMSg:msg1}</h3>
+                    <h3>{undefine ? undefinedMSg : msg1}</h3>
                 </div>
             )}
 

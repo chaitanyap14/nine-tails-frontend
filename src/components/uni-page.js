@@ -11,7 +11,7 @@ function UniPage() {
     const [data, setData] = useState({});
 
     // console.log(location.state);
-    const { college, url, country, scraperUrl } = location.state;
+    const { college, url, country } = location.state;
 
     useEffect(() => {
         axios
@@ -28,7 +28,7 @@ function UniPage() {
         axios.post("http://localhost:7000/", location.state).then((res) => {
             setData(res.data);
         });
-    }, []);
+    });
 
     console.log(data);
 
@@ -79,7 +79,8 @@ function UniPage() {
                             <img
                                 className="uni-page-elements uni-page-img"
                                 src={data.qsLogo}
-                            ></img>
+                                alt=""
+                            />
                         </div>
                         <div className="col col-img">
                             <h3 className="uni-page-elements  uni-page-data">
@@ -88,7 +89,8 @@ function UniPage() {
                             <img
                                 className="uni-page-elements uni-page-img"
                                 src={data.wurLogo}
-                            ></img>
+                                alt=""
+                            />
                         </div>
                     </div>
                 </div>
