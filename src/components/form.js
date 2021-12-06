@@ -88,7 +88,7 @@ function Form() {
                     return uni;
                 }
             }
-            return null;
+            return "";
         });
         setUnis(filteredUnis);
         setState(true);
