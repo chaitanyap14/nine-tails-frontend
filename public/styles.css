@@ -1,0 +1,639 @@
+body {
+    margin: 0px;
+    border: 0px;
+    padding: 0;
+}
+
+/* navbar contents */
+
+.button-class {
+    text-decoration: none;
+    color: white;
+    /* margin: 20px; */
+}
+
+.button-class:hover {
+    color: white;
+}
+
+.navbar {
+    background: transparent;
+    opacity: 2;
+    width: 100%;
+    color: white;
+    padding: 5px;
+    padding-bottom: 2px !important;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    letter-spacing: 5px;
+}
+.navbar-nav li a:hover {
+    color: #1abc9c !important;
+}
+
+.navbar-brand {
+    font-family: "Kings", cursive;
+    margin-left: 5%;
+    color: white;
+}
+
+.navbar-brand:hover {
+    color: #2f86a6;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.items {
+    margin-left: 2px;
+}
+
+.navbar.active {
+    background-image: linear-gradient(to right, #126e82, #132c33);
+}
+
+/* About page */
+
+.about {
+    background-image: url("./images/uni8.jpg");
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.about-content {
+    text-align: left;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    line-height: 1.5;
+    color: white;
+    width: 30%;
+}
+
+.about-content p {
+    margin-top: 5%;
+    font-size: 22px;
+}
+
+.subs {
+    margin: 10px;
+}
+
+/* Home page contents */
+
+.home {
+    background-image: url("./images/uni8.jpg");
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.info {
+    font-size: 35px;
+    margin: 30px;
+    margin-top: 60px;
+    line-height: 1.5;
+    color: white;
+    width: 40%;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    padding: 5%;
+}
+
+/* Form Page contents */
+
+.form {
+    background-image: url("./images/uni8.jpg");
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 20px;
+    text-align: center;
+}
+
+.title-container {
+    margin-top: 40%;
+}
+.form-content {
+    text-align: center;
+
+    width: 70%;
+    left: 15%;
+    position: absolute;
+    top: 35%;
+
+    color: white;
+}
+
+.no-display {
+    padding: 5px;
+    color: white;
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 20px;
+    position: absolute;
+    width: 100%;
+    top: 15%;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+    background: #d8e3e7;
+    font-family: "Open Sans", sans-serif;
+}
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+    max-width: 500px;
+    max-height: 200px;
+}
+
+.searchTerm {
+    background: transparent;
+    width: 100%;
+    border: 3px solid #d8e3e7;
+    border-right: none;
+    padding: 5px;
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #d8e3e7;
+}
+
+.searchTerm:focus {
+    /* color: #D8E3E7; */
+    color: white;
+}
+.searchTerm::-webkit-input-placeholder {
+    color: white;
+    /* font-weight: bold; */
+}
+
+.middle {
+    text-align: center;
+    color: white;
+    margin: 30px;
+}
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #d8e3e7;
+    background: #d8e3e7;
+    text-align: center;
+    color: black;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+    opacity: 0.7;
+    padding: 20px;
+    width: 30%;
+    border-color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* card contents  */
+.note {
+    background-color: red;
+    opacity: 0.95;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 10px;
+    width: 240px;
+    margin: 16px;
+    border-radius: 10px;
+}
+
+.card {
+    background: transparent;
+    text-align: left;
+
+    max-width: 200px;
+    max-height: 250px;
+}
+.card-link {
+    color: white;
+}
+
+.card-link:hover {
+    color: #d8e3e7;
+}
+
+.card-subtitle {
+    color: white;
+}
+
+.card-title {
+    color: white;
+}
+
+.card-button {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+/*List of universities */
+.unilist {
+    margin-top: 25vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+    list-style-type: none;
+    display: grid;
+
+    top: 25px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.unicard {
+    border: 3px solid #00b4cc;
+}
+.example::-webkit-scrollbar {
+    display: none;
+}
+.example {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html {
+    overflow: scroll;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+@media only screen and (max-width: 1020px) {
+    .about-content {
+        width: 70%;
+        left: 10vw;
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .info {
+        line-height: 1.5;
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .unilist {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .wrap {
+        position: center;
+        width: 40vw;
+    }
+
+    .about-content {
+        top: 25%;
+        text-align: center;
+        width: 70vw;
+        left: 15vw;
+    }
+
+    .info {
+        width: 60vw;
+        left: 40vw;
+        line-height: 1.5;
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 541px) {
+    .unilist {
+        grid-template-columns: 1fr;
+    }
+
+    .wrap {
+        position: center;
+        width: 70vw;
+    }
+
+    .home {
+        display: flex;
+    }
+
+    .info {
+        top: 20%;
+        position: center;
+        text-align: left;
+        width: 70%;
+        left: 10vw;
+        font-size: 30px;
+        line-height: 1.23;
+    }
+
+    .about-content p {
+        font-size: 18px;
+    }
+
+    .uniranks {
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* uni-page contents */
+
+.uni-page-contents {
+    background-image: linear-gradient(white, #c2fff9);
+    background-size: contain;
+
+    width: 100vw;
+    height: 100%;
+
+    text-align: center;
+
+    color: black;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.uni-page-elements {
+    margin: 30px;
+    text-decoration: none;
+}
+
+.uni-page-img {
+    width: 30%;
+    height: 50%;
+    display: block;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.col {
+    outline: 2px black;
+}
+
+.col-img {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    margin: 50px;
+}
+
+.title-uni {
+    font-family: "Dancing Script", cursive;
+    font-size: 70px;
+}
+
+.subtitle-uni {
+    font-size: 50px;
+    font-family: "IBM Plex Serif", serif;
+}
+
+.uni-page-titles {
+    font-family: "Cantata One", serif;
+}
+
+.uni-page-titles:hover {
+    color: #b42b51;
+    cursor: pointer;
+}
+
+.uni-page-data {
+    font-family: "Birthstone", cursive;
+}
+
+.unicost {
+    margin: 1em;
+}
+
+.uniavgliving {
+    margin: 1em;
+}
+
+/* ==========================Map page Contents========================== */
+
+.uni-map {
+    background-image: url("./images/uni8.jpg");
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.map-container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.fa-map-marker-alt {
+    color: red;
+    size: 9;
+}
+
+/* ===========================Info Page Contents========================= */
+
+.instrone {
+    background-image: url("./images/info3.jpg");
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.instrone > .overlay {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.searchinstrimg {
+    height: 40%;
+    width: 80%;
+    margin: 3em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: solid white;
+}
+
+.searchinstr {
+    margin: 2em;
+}
+
+.searchinstr > ul > li {
+    color: white;
+    font-size: 2em;
+}
+
+.instrtwo {
+    background-image: url("./images/info1.jpg");
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.instrtwo > .overlay {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.uniinstrimg {
+    height: 30%;
+    width: 80%;
+    margin: 4em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: solid black;
+}
+
+.uniinstr {
+    margin: 2em;
+}
+
+.uniinstr > ul > li {
+    color: white;
+    font-size: 2em;
+}
+
+.instrthree {
+    background-image: url("./images/info2.jpg");
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.instrthree > .overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.notice {
+    color: white;
+    font-size: 2em;
+    margin: 3em;
+}
+
+.availableunis {
+    color: white;
+    font-size: 1.5em;
+    width: 85vw;
+}
+
+.avlunilist {
+    margin: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.continuebtn {
+    margin: 4em;
+}
+
+.overlay {
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(
+        to bottom,
+        rgb(0, 0, 0),
+        transparent,
+        rgb(0, 0, 0) 99.9%
+    );
+}
+
+.avlunilisttitle {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1000px) {
+    .instrone > .overlay {
+        grid-template-columns: 1fr;
+    }
+
+    .searchinstrimg {
+        height: 60%;
+        width: 60%;
+    }
+
+    .instrtwo > .overlay {
+        grid-template-columns: 1fr;
+    }
+
+    .uniinstrimg {
+        height: 50%;
+        width: 60%;
+    }
+
+    .avlunilist {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .availableunis {
+        font-size: 1.3em;
+    }
+
+    .notice {
+        font-size: 1.5em;
+    }
+
+    .avlunilisttitle {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .searchinstr > ul > li {
+        font-size: 1.5em;
+    }
+
+    .uniinstr > ul > li {
+        font-size: 1.5em;
+    }
+
+    .avlunilist {
+        grid-template-columns: 1fr;
+    }
+
+    .notice {
+        font-size: 1.3em;
+    }
+
+    .avlunilisttitle {
+        font-size: 1.3em;
+    }
+
+    .availableunis {
+        font-size: 1em;
+    }
+}
